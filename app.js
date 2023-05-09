@@ -97,18 +97,17 @@ app.get('/studentclaim', async (req, res) => {
 // })
 app.get('/studentclaimaff', async (req, res) => {
   if (req.session.isLoggedIn) {
-    const data = await claim.findOne({ marticule: req.session.mat }).exec();
+    const data = await claim.find({ marticule: req.session.mat });
     console.log(data);
 
-    function fo(data){
-      
-    }
+    
 
     res.render('studentclaimaff', { data: data ,naming: `${req.session.userName}` });
   } else {
     res.redirect('/');
   }
 });
+
 
 
 

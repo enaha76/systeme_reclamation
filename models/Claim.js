@@ -14,7 +14,8 @@ const claimSchema = new mongoose.Schema({
   commentaire: {
     type: String,
     required: true
-  }
+  },
+  dateInserted: { type: Date, default: Date.now }
 });
 
 

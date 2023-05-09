@@ -165,9 +165,6 @@ app.get('/adminsubject', (req, res) => {
 
 
 
-app.get('/dl', (req, res) => {
-    res.render('a')
-})
 
 
 

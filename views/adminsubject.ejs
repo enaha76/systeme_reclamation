@@ -10,6 +10,8 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
         <!-- third party css -->
         <link href="assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
         <!-- third party css end -->
@@ -210,123 +212,14 @@
                                             <div class="card">
                                                 <div class="card-body">
                                                     
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#add-new-task-modal" class="btn btn-success btn-sm ms-3 m-2"><i class=" dripicons-plus">Ajouter une Matiere</i></a>
-                                    <!--  Add new task modal -->
-                                    <div class="modal fade task-modal-content" id="add-new-task-modal" tabindex="-1" role="dialog" aria-labelledby="NewTaskModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered modal-lg">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h4 class="modal-title" id="NewTaskModalLabel">loloo</h4>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body" id="select2-preview">
-                                                    <form class="p-2" action="" method="POST">
-                                                        
-                                                        <div class="row">
-                                                            <div class="col-md-8">
-                                                                <div class="mb-3">
-                                                                    <label for="task-title" class="form-label">Nom</label>
-                                                                    <input type="text" class="form-control form-control-light" id="task-title" name="nom" >
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="mb-3"id="select2-multiple">
-                                                                    <label for="task-priority2" class="form-label">Type d'evaluation</label>
-                                                                    <!-- Multiple Select -->
-                                                                        <select class="select2 form-control select2-multiple" id="select2-multiple" data-toggle="select2" multiple="multiple" data-placeholder="Choose ...">
-                                                                            <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                                                <option value="AK">Alaska</option>
-                                                                                <option value="HI">Hawaii</option>
-                                                                            </optgroup>
-                                                                            <optgroup label="Pacific Time Zone">
-                                                                                <option value="CA">California</option>
-                                                                                <option value="NV">Nevada</option>
-                                                                                <option value="OR">Oregon</option>
-                                                                                <option value="WA">Washington</option>
-                                                                            </optgroup>
-                                                                        
-                                                                        </select>
-                                                                
-                                                                </div>
-                                                            </div>
+                                                    <form action="/upload" method="POST" enctype="multipart/form-data">
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name="file">
+                                                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                                                         </div>
-                            
-                                                        <div class="row">
-                                                            <div class="col-md-8">
-                                                        
-                                                                    <label for="task-title" class="form-label">Semestre</label>
-                                                                <!-- Single Select -->
-                                                                <select class="select2 form-control select2-multiple" data-toggle="select2" multiple="multiple" data-placeholder="Choose ...">
-                                                                    <option>Select</option>
-                                                                    <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                                        <option value="AK">Alaska</option>
-                                                                        <option value="HI">Hawaii</option>
-                                                                    </optgroup>
-                                                                    <optgroup label="Pacific Time Zone">
-                                                                        <option value="CA">California</option>
-                                                                        <option value="NV">Nevada</option>
-                                                                        <option value="OR">Oregon</option>
-                                                                        <option value="WA">Washington</option>
-                                                                    </optgroup>
-                                                                    </select>
-                                                            </div>
-                            
-                                                        
-                                                        </div>
-                            
-                                                            
-                                                            <div class="text-end">
-                                                            <input type="submit" class="btn btn-light"  value="Annuler" data-dismiss="modal">
-                                                                <input type="submit" class="btn btn-primary" value="Enregistrer">
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div><!-- /.modal-content -->
-                                            </div><!-- /.modal-dialog -->
-                                        </div><!-- /.modal -->
-                            
-                                                    <div class="tab-content">
-                                                        <div class="tab-pane show active" id="buttons-table-preview 1">
-                                                            <table class="table table-striped dt-responsive nowrap w-100" >
-                                                                
-                                                                <thead>
-                                                                    <tr style="font-weight:bold">
-                                                                
-                                                                    <td colspan="2">id</td>
-                                                                    <td>Matiere</td>
-                                                                    <td>Type d'evaluation</td>
-                                                                    <td>semmestre</td>
-                                                                    <td>Action</td>
-                                                            
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                            
-                                                                <tr>
-                        
-                                                            
-                                                            <td><a href="{{url('etablissements/'.$eta->id)}}"> </a></td> 
-                                                            <td><a href="{{url('etablissements/'.$eta->id)}}"> </a></td>
-                                                                <td> </td>
-                                                                <td>   </td>
-                                                                <td>  </td>
-                                                                <td class="table-action">
-                                                                    <a href="javascript: void(0);" class="action-icon"> <i class="mdi mdi-pencil"></i></a>
-                                                                    <a href="javascript: void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                                </td> 
-                                                            </tr>
-                                                                
-                                                        
-                                                                
-                                                                </tbody>
-                                                            </table>
-                        
-                                                            
-                        
-                                                        </div> <!-- end preview-->
-                                                    
-                                                    
-                                                    </div> <!-- end tab-content-->
+                                                        <br><br>
+                                                        <button type="submit" class="btn btn-primary">Upload</button>
+                                                    </form>
                                                     
                                                 </div> <!-- end card body-->
                                             </div> <!-- end card -->

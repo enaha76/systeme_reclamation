@@ -6,7 +6,7 @@ const usersController = require('../controllers/usersController');
 
 router.get('/', usersController.displayadmin);
 
-// router.get('/m', usersController.displayadminm);
+
 
 // router.get('/subject', usersController.displayadmins);
 

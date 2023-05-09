@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [type="file"] {
+            /* Style the color of the message that says 'No file chosen' */
+            color: #878787;
+        }
+
+        [type="file"]::-webkit-file-upload-button {
+            background: #ED1C1B;
+            border: 2px solid #ED1C1B;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 12px;
+            outline: none;
+            padding: 10px 25px;
+            text-transform: uppercase;
+            transition: all 1s ease;
+        }
+
+        [type="file"]::-webkit-file-upload-button:hover {
+            background: #fff;
+            border: 2px solid #535353;
+            color: #000;
+        }
+
+        /* GENERAL STYLING OF PAGE — NOT APPLICABLE TO EXAMPLE */
+        body {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <!-- <input type="file"/> -->
+        <button type="submit">Upload</button>
+    </form>
+</body>
+
+</html>

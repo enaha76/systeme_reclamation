@@ -11,10 +11,10 @@ router.get('/create', usersController.displayCreateUserForm);
 
 // GET route to display all existing users
 // router.get('/', usersController.displayUsers);
-
+router.post('/ins',usersController.insert_claim);
 router.get('/signup',usersController.signup)
 
-router.post('/signup',usersController.createUser)
+router.post('/signup',usersController.insert)
 
 router.get('/',usersController.login)
 
@@ -24,7 +24,7 @@ router.get('/logout',usersController.logout)
 
 router.get('/home',usersController.home)
 
-router.post('/insert',usersController.insert)
+// router.post('/insert',usersController.insert)
 
 
 

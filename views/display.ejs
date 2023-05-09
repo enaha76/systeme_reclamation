@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Uploaded Excel Data</title>
+</head>
+
+<body>
+    <h1>Uploaded Excel Data:</h1>
+    <table>
+        <thead>
+            <tr>
+                <% Object.keys(data[0]).forEach(function(key) { %>
+                    <th>
+                        <%= key %>
+                    </th>
+                    <% }); %>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(function(row) { %>
+                
+                <% if(row['Matricule']==22089) { %>
+                    <tr>
+                        <% Object.values(row).forEach(function(value) { %>
+                            <td>
+                                <%= value %>
+                            </td>
+                            <% }); %>
+                    </tr>
+                <% }; %>
+                    
+                <% }); %>
+        </tbody>
+    </table>
+</body>
+
+</html>

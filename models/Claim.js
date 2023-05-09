@@ -1,8 +1,14 @@
 const mongoose = require('mongoose');
 
-const expressSchema = new mongoose.Schema({
+
+const claimSchema = new mongoose.Schema({
+  marticule:{
+    type:String,
+    required: true
+  }
+  ,
   matiere: {
-    type: [String], // an array of strings
+    type: Object,
     required: true
   },
   commentaire: {
@@ -11,4 +17,6 @@ const expressSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('Express', expressSchema);
+
+
+module.exports = mongoose.model('Claim', claimSchema);

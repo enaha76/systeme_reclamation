@@ -1,0 +1,108 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login Form</h1>
+
+    <form action="/login" method="post" >
+        <input placeholder="Name" name="name" type="text">
+        <br>
+        <input placeholder="Password" name="password" type="password">
+        <br>
+        <input class="sub" type="submit">
+    <h3>Dont have a account ?</h3>
+    <a href="/signup">Create a new account</a>
+    </form>
+
+
+    <p>Don't have an account? <a href="/signup">Sign up</a></p>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>web</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- App css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style" />
+        <link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style" />
+
+    </head>
+
+    <body class="authentication-bg" data-layout-config='{"darkMode":false}'>
+
+        <div class="auth-fluid">
+            <!--Auth fluid left content -->
+            <div class="auth-fluid-form-box pt-0">
+                <div class="">
+                    <div class="card-body">
+
+                        <!-- Logo -->
+                        <div class="text-center text-lg-start">
+                            <a href="index.html" class="logo-dark">
+                                <span><img src="assets/images/logo.png" alt=""  width="200"height="170" ></span>
+                            </a>  
+                        </div>
+
+
+                        <!-- form -->
+                        <form action="/login" method="post" >
+                            <div class="mb-3">
+                                <label for="emailaddress" class="form-label ">Email address</label>
+                                <input class="form-control" type="text" name="name" id="emailaddress" required="" placeholder="Enter your email">
+                            </div>
+                            <div class="mb-3">
+                                <a href="#" class="text-muted float-end"><small>Forgot your password?</small></a>
+                                <label for="password" class="form-label ">Password</label>
+                                <input class="form-control" name="password" type="password" required="" id="password" placeholder="Enter your password">
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input " id="checkbox-signin">
+                                    <label class="form-check-label" for="checkbox-signin">Remember me</label>
+                                </div>
+                            </div>
+                            <div class="d-grid mb-0 text-center">
+                                <button class="btn btn-primary" type="submit"><i class="mdi mdi-login"></i> Log In </button>
+                            </div>
+                            <!-- social-->
+                        
+                        </form>
+                        <!-- end form-->
+
+                        <!-- Footer-->
+                        <footer class="footer footer-alt">
+                            <p class="text-muted">Don't have an account? <a href="/signup" class="text-muted ms-1"><b>Sign Up</b></a></p>
+                        </footer>
+
+                    </div> <!-- end .card-body -->
+                </div> <!-- end .align-items-center.d-flex.h-100-->
+            </div>
+            <!-- end auth-fluid-form-box-->
+
+            <!-- Auth fluid right content -->
+    
+            <!-- end Auth fluid right content -->
+        </div>
+        <!-- end auth-fluid-->
+
+        <!-- bundle -->
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+
+    </body>
+
+</html>

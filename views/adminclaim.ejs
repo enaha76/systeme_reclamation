@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>supnum</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
+        <meta content="Coderthemes" name="author">
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- third party css -->
+        <link href="assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
+        <!-- third party css end -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- App css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style">
+        <link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style">
+
+    </head>
+    <style>
+        /* Scale the favicon to 32x32 pixels */
+        link[rel="shortcut icon"] {
+            width: 64px;
+            height: px64;
+        }
+    </style>
+   
+    <body class="loading" data-layout-config='{"leftSideBarTheme":"light","layoutBoxed":false, "leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":false, "showRightSidebarOnStart": true}'>
+        <!-- Begin page -->
+        <div class="wrapper">
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="leftside-menu">
+    
+                <!-- LOGO -->
+                <a href="index.html" class="logo text-center logo-light">
+                    <span class="logo-lg">
+                        <img src="assets/images/logo.png" alt="" height="110">
+                    </span>
+                    <span class="logo-sm">
+                        <img src="assets/images/logo_sm.png" alt="" height="120">
+                    </span>
+                </a>
+
+                <!-- LOGO -->
+                <a href="index.html" class="logo text-center logo-dark">
+                    <span class="logo-lg">
+                        <img src="assets/images/logo.png" alt="" height="90">
+                    </span>
+                    <span class="logo-sm">
+                        <img src="assets/images/logo.png" alt="" height="90">
+                    </span>
+                </a>
+    
+                <div class="h-100" id="leftside-menu-container" data-simplebar="">
+
+                    <!--- Sidemenu -->
+                    <ul class="side-nav">
+
+                        <li class="side-nav-title side-nav-item">Navigation</li>
+
+                        <li class="side-nav-item">
+                            <a data-bs-toggle="collapse" href="#sidebarDashboards" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                                <i class="uil-home-alt"></i>
+                                <span class="badge bg-success float-end">4</span>
+                                <span> Dashboards </span>
+                            </a>
+                            <div class="collapse" id="sidebarDashboards">
+                                <ul class="side-nav-second-level">
+                                    <li>
+                                        <a href="/admin">Reclamations</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/subject">Matiere</a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="side-nav-title side-nav-item">Gestions</li>
+
+                        <li class="side-nav-item">
+                            <a href="/admin/m" class="side-nav-link">
+                                <i class="uil-calender"></i>
+                                <span> Reclamations </span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item">
+                            <a href="#" class="side-nav-link">
+                                <i class="uil-comments-alt"></i>
+                                <span> Chat </span>
+                            </a>
+                        </li>
+
+                     
+            
+                     
+
+
+                    <!-- Help Box -->
+                    <div class="help-box text-white text-center">
+                        <a href="javascript: void(0);" class="float-end close-btn text-white">
+                            <i class="mdi mdi-close"></i>
+                        </a>
+                        <img src="assets/images/help-icon.svg" height="90" alt="Helper Icon Image">
+                        <h5 class="mt-3">Reclamations</h5>
+                        <p class="mb-3">Institut superieur du numerique</p>
+                        <a href="javascript: void(0);" class="btn btn-outline-light btn-sm">Upgrade</a>
+                    </div>
+                    <!-- end Help Box -->
+                    <!-- End Sidebar -->
+
+                    <div class="clearfix"></div>
+
+                </div>
+                <!-- Sidebar -left -->
+
+            </div>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+                    <!-- Topbar Start -->
+                    <div class="navbar-custom">
+                        <ul class="list-unstyled topbar-menu float-end mb-0">
+                            
+                            <li class="dropdown notification-list">
+                                <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <span class="account-user-avatar"> 
+                                        <img src="assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                                    </span>
+                                    <span>
+                                        <span class="account-user-name">Supnum</span>
+                                        <span class="account-position">Admin</span>
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
+                                    <!-- item-->
+                                    <div class=" dropdown-header noti-title">
+                                        <h6 class="text-overflow m-0">Welcome !</h6>
+                                    </div>
+
+                                   
+
+
+                                  
+                                    <!-- item-->
+                                    <a href="/logout" class="dropdown-item notify-item">
+                                        <i class="mdi mdi-logout me-1"></i>
+                                        <span>Logout</span>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                        <button class="button-menu-mobile open-left">
+                            <i class="mdi mdi-menu"></i>
+                        </button>
+                      
+                    </div>
+                    <!-- end Topbar -->
+
+                    
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <form class="d-flex">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control form-control-light" id="dash-daterange">
+                                                <span class="input-group-text bg-primary border-primary text-white">
+                                                    <i class="mdi mdi-calendar-range font-13"></i>
+                                                </span>
+                                            </div>
+                                            <a href="javascript: void(0);" class="btn btn-primary ms-2">
+                                                <i class="mdi mdi-autorenew"></i>
+                                            </a>
+                                        </form>
+                                    </div>
+                                    <h4 class="page-title">Reclamations</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+                           
+                        <!-- end page title --> 
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card widget-inline">
+                                    <div class="card-body p-0">
+                                        <div class="row g-0">
+                                            <div class="col-sm-6 col-xl-4">
+                                                <div class="card shadow-none m-0">
+                                                    <div class="card-body text-center">
+                                                        <i class="dripicons-briefcase text-muted" style="font-size: 24px;"></i>
+                                                        <h3><span>29</span></h3>
+                                                        <p class="text-muted font-15 mb-0">Matieres</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="col-sm-6 col-xl-4">
+                                                <div class="card shadow-none m-0 border-start">
+                                                    <div class="card-body text-center">
+                                                        <i class="dripicons-checklist text-muted" style="font-size: 24px;"></i>
+                                                        <h3><span>715</span></h3>
+                                                        <p class="text-muted font-15 mb-0">Reclamations</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="col-sm-6 col-xl-4">
+                                                <div class="card shadow-none m-0 border-start">
+                                                    <div class="card-body text-center">
+                                                        <i class="dripicons-user-group text-muted" style="font-size: 24px;"></i>
+                                                        <h3><span>31</span></h3>
+                                                        <p class="text-muted font-15 mb-0">Etudiants</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            
+                
+                                        </div> <!-- end row -->
+                                    </div>
+                                </div> <!-- end card-box-->
+                            </div> <!-- end col-->
+                        </div>
+                        <!-- end row-->
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12">
+                                <div class="card">
+                               <div class="card-body">
+
+                                <table class="table table-centered mb-0 overflow-auto">
+                                    <a href="" class="p-0 float-end">Export <i class="mdi mdi-download ms-1"></i></a>
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>Etudiants</th>
+                                            <th>Matiere 1</th>
+                                            <th>Matiere 2</th>
+                                            <th>Matiere 3</th>
+                                            <th>Description</th>
+                                            <th>Status</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>21047</td>
+                                            <td>oopjava
+                                                <nav class="badge bg-primary">TP </nav>
+                                            </td>
+                                            <td>Flask
+                                                <nav class="badge bg-info">Devoir</nav>
+                                            </td>
+                                                <td>Mongodb
+                                                    <nav class="badge bg-success">Examen</nav>
+                                                </td>
+                                        
+                                        <td style="word-wrap: break-word; max-width: 300px; font-weight: bold;"><div class="overflow-auto"><p>Le lorem ipsum (également appelé faux-texte, lipsum, ou bolo bolo1) est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.
+
+                                            
+                                        </p></div></td>
+                                            <td><i class="mdi mdi-circle text-danger"></i> non-repondu</td>
+                                        </tr>
+                                        <tr>
+                                            <td>21074</td>
+                                            <td>oopjava
+                                                
+                                                <nav class="badge bg-info">Devoir</nav>
+                                            </td>
+                                            <td>Flask
+                                                <nav class="badge bg-info">Devoir</nav>
+                                            </td>
+                                                <td>Mongodb
+                                                    <nav class="badge bg-success">Examen</nav>
+                                                </td>
+                                        
+                                            <td style="word-wrap: break-word; max-width: 300px; font-weight: bold;"><div class="overflow-auto"><p>Le lorem ipsum (également appelé faux-texte, lipsum, ou bolo bolo1) est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.
+
+
+                                                
+                                                
+                                            </p></div></td>
+                                            <td><i class="mdi mdi-circle text-success"></i> repondu</td>
+                                        </tr>
+                                        <tr>
+                                            <td>21056</td>
+                                            <td>oopjava
+                                                <nav class="badge bg-primary">TP </nav>
+                                            </td>
+                                            <td>Flask
+                                                <nav class="badge bg-info">Devoir</nav>
+                                            </td>
+                                                <td>Mongodb
+                                                    <nav class="badge bg-success">Examen</nav>
+                                                </td>
+                                            <td style="word-wrap: break-word; max-width: 300px; font-weight: bold;"><div class=""><p>Le lorem ipsum (également appelé faux-texte, lipsum, ou bolo bolo1) est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.
+
+                                              
+                                            </p></div></td>
+                                            <td><i class="mdi mdi-circle text-success"></i> repondu</td>
+                                        </tr>
+                                        <tr>
+                                            <td>21067</td>
+                                            <td>oopjava
+                                                <nav class="badge bg-primary">TP </nav>
+                                            </td>
+                                            <td>Flask
+                                                <nav class="badge bg-info">Devoir</nav>
+                                            </td>
+                                                <td>Mongodb
+                                                    <nav class="badge bg-success">Examen</nav>
+                                                </td>
+                                        
+                                            <td style="word-wrap: break-word; max-width: 300px; font-weight: bold;"><div class=""><p>Le lorem ipsum (également appelé faux-texte, lipsum, ou bolo bolo1) est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.
+
+                                                
+
+                                                
+                                            </p></div></td>
+                                            <td><i class="mdi mdi-circle text-danger"></i> non-repondu</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                               </div>
+                            </div> <!-- end col -->
+
+                            
+                        </div>
+
+                        
+                        
+
+                       
+
+                    </div>
+                    <!-- container -->
+
+                </div>
+                <!-- content -->
+
+                <!-- Footer Start -->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <script>document.write(new Date().getFullYear())</script> © Hyper - Coderthemes.com
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-md-end footer-links d-none d-md-block">
+                                    <a href="javascript: void(0);">About</a>
+                                    <a href="javascript: void(0);">Support</a>
+                                    <a href="javascript: void(0);">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end Footer -->
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        <!-- Right Sidebar -->
+        <div class="end-bar">
+
+            <div class="rightbar-title">
+                <a href="javascript:void(0);" class="end-bar-toggle float-end">
+                    <i class="dripicons-cross noti-icon"></i>
+                </a>
+                <h5 class="m-0">Settings</h5>
+            </div>
+
+            <div class="rightbar-content h-100" data-simplebar="">
+
+                <div class="p-3">
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Customize </strong> the overall color scheme, sidebar menu, etc.
+                    </div>
+
+                    <!-- Settings -->
+                    <h5 class="mt-3">Color Scheme</h5>
+                    <hr class="mt-1">
+
+                    <div class="form-check form-switch mb-1">
+                        <input class="form-check-input" type="checkbox" name="color-scheme-mode" value="light" id="light-mode-check" checked="">
+                        <label class="form-check-label" for="light-mode-check">Light Mode</label>
+                    </div>
+
+                    <div class="form-check form-switch mb-1">
+                        <input class="form-check-input" type="checkbox" name="color-scheme-mode" value="dark" id="dark-mode-check">
+                        <label class="form-check-label" for="dark-mode-check">Dark Mode</label>
+                    </div>
+
+
+                    <!-- Width -->
+                    <h5 class="mt-4">Width</h5>
+                    <hr class="mt-1">
+                    <div class="form-check form-switch mb-1">
+                        <input class="form-check-input" type="checkbox" name="width" value="fluid" id="fluid-check" checked="">
+                        <label class="form-check-label" for="fluid-check">Fluid</label>
+                    </div>
+
+                    <div class="form-check form-switch mb-1">
+                        <input class="form-check-input" type="checkbox" name="width" value="boxed" id="boxed-check">
+                        <label class="form-check-label" for="boxed-check">Boxed</label>
+                    </div>
+        
+
+                    <!-- Left Sidebar-->
+                    <h5 class="mt-4">Left Sidebar</h5>
+                    <hr class="mt-1">
+                    <div class="form-check form-switch mb-1">
+                        <input class="form-check-input" type="checkbox" name="theme" value="default" id="default-check">
+                        <label class="form-check-label" for="default-check">Default</label>
+                    </div>
+
+                    <div class="form-check form-switch mb-1">
+                        <input class="form-check-input" type="checkbox" name="theme" value="light" id="light-check" checked="">
+                        <label class="form-check-label" for="light-check">Light</label>
+                    </div>
+
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input" type="checkbox" name="theme" value="dark" id="dark-check">
+                        <label class="form-check-label" for="dark-check">Dark</label>
+                    </div>
+
+                    <div class="form-check form-switch mb-1">
+                        <input class="form-check-input" type="checkbox" name="compact" value="fixed" id="fixed-check" checked="">
+                        <label class="form-check-label" for="fixed-check">Fixed</label>
+                    </div>
+
+                    <div class="form-check form-switch mb-1">
+                        <input class="form-check-input" type="checkbox" name="compact" value="condensed" id="condensed-check">
+                        <label class="form-check-label" for="condensed-check">Condensed</label>
+                    </div>
+
+                    <div class="form-check form-switch mb-1">
+                        <input class="form-check-input" type="checkbox" name="compact" value="scrollable" id="scrollable-check">
+                        <label class="form-check-label" for="scrollable-check">Scrollable</label>
+                    </div>
+
+                    <div class="d-grid mt-4">
+                        <button class="btn btn-primary" id="resetBtn">Reset to Default</button>
+            
+                        <a href="../../product/hyper-responsive-admin-dashboard-template/index.htm" class="btn btn-danger mt-3" target="_blank"><i class="mdi mdi-basket me-1"></i> Purchase Now</a>
+                    </div>
+                </div> <!-- end padding-->
+
+            </div>
+        </div>
+
+        <div class="rightbar-overlay"></div>
+        <!-- /End-bar -->
+
+        <!-- bundle -->
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+
+        <!-- third party js -->
+        <!-- <script src="assets/js/vendor/Chart.bundle.min.js"></script> -->
+        <script src="assets/js/vendor/apexcharts.min.js"></script>
+        <script src="assets/js/vendor/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="assets/js/vendor/jquery-jvectormap-world-mill-en.js"></script>
+        <!-- third party js ends -->
+
+        <!-- demo app -->
+        <script src="assets/js/pages/demo.dashboard-analytics.js"></script>
+        <!-- end demo js-->
+    </body>
+
+</html>

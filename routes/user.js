@@ -24,7 +24,7 @@ router.get('/logout',usersController.logout)
 
 router.get('/home',usersController.home)
 
-// router.post('/insert',usersController.insert)
+
 
 
 

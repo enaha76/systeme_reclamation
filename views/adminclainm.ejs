@@ -186,70 +186,22 @@
                         <div class="card-body ">
                           <!-- Center modal -->
                           
-                            <div class="col-sm-4  m-4">
-                               
+                          <form action="/claimTime" method="post">
                                 
+                            <!-- Date Range -->
+                            <div class="mb-3">
 
-                                <select class="select2 form-control select2-multiple border border-primary " data-toggle="select2" multiple="multiple" data-placeholder="Choisir un/des Semestre">
-                                    <optgroup label="L1">
-                                        <option value="S1">S1</option>
-                                        <option value="S2">S2</option>
-                                    </optgroup>
-                                    <optgroup label="L2">
-                                        <option value="S3">S3</option>
-                                        <option value="S4">S4</option>
-                                      
-                                    </optgroup>
-                                    
-                                   
-                                    <optgroup label="L3">
-                                        <option value="S5">S5</option>
-                                        <option value="S6">S6</option>
-                                        
-                                    </optgroup>
-                                </select>
-                            </div> <!-- end col -->
-                            <table class="table table-centered  m-2">
-                                <thead class="table-dark">
-                                    <tr>
-                                     
-                                        <th>Matiere</th>
-                                        
-                                        <th>Ajouter</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>oopjava</td>
-                                       
-                                        <td>
-                                            <!-- Switch-->
-                                            <div>
-                                            
-                                                <input type="checkbox" id="switch5" checked data-switch="primary"/>
-                                                <label for="switch5" data-on-label="On" data-off-label="Off"></label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                
-                                    <tr>
-                                      
-                                        <td>Flask</td>
-                                        
-                                        <td>
-                                         
-                                            
-                                            <input type="checkbox" id="switch4" checked data-switch="primary"/>
-                                            <label for="switch4" data-on-label="On" data-off-label="Off"></label>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="col-sm-2 float-right">
-                                <label class="form-label badge bg-primary ">Days</label>
-                               <input data-toggle="touchspin" data-bts-max="10"  data-bts-min="1" value="" data-btn-vertical="true" type="text"><br>
-                                </div>
-                            <button type="button" class="btn btn-danger float-end" data-bs-toggle="modal" data-bs-target="#centermodal"><i class="mdi mdi-plus-circle-outline"></i> Add</button>
+                           
+                                <label class="form-label  ">Deadline</label>
+                                <input type="text" class="form-control date" id="datepicker" name="Days" data-toggle="date-picker" data-single-date-picker="true">
+
+                          
+                            </div>
+
+                            <!-- <input data-toggle="touchspin" data-bts-max="10"  data-bts-min="1" value="" data-btn-vertical="true" type="text"id="displayDays"><br> -->
+                          
+                            <input type="submit" class="btn btn-danger float-end" data-bs-toggle="modal" data-bs-target="#centermodal">
+                        </form>
                         </div>
                        </div>
                     </div> <!-- container -->

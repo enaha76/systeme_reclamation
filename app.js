@@ -12,6 +12,8 @@ const Student = require('./models/Student');
 const claim =require('./models/claim');
 const upload = multer({ dest: 'uploads/' }); // 'uploads/' is the directory where the uploaded file will be stored
 // const fs = require('fs');
+const claimTime = require('./models/claimTime');
+
 
 
 const app = express();
@@ -61,12 +63,18 @@ app.get('/test', (req, res) => {
 app.get('/studentclaim', async (req, res) => {
   if (req.session.isLoggedIn) {
     const data = await Student.findOne({ matricule: req.session.mat }).exec();
+    claimTime.findOne({}, {}, { sort: { '_id' : -1 } })
+    .then((latestClaim) => {
+       lastDuration = latestClaim.duration;
+      
     console.log(data);
-    res.render('studentclaim', { data: data ,naming: `${req.session.userName}` });
+    res.render('studentclaim', { data: data ,naming: `${req.session.userName}`, lastDuration: lastDuration  });
+  })
   } else {
     res.redirect('/');
   }
 });
+
 
 
 // app.get('/studentclaim', (req, res) => {
@@ -288,6 +296,23 @@ app.post('/upload', upload.single('file'), (req, res) => {
 
 
 
+
+
+app.post('/claimTime', async (req, res) => {
+  const newclaim = new claimTime({
+    duration: req.body.Days
+  
+  });
+  console.log(newclaim.duration);
+  newclaim.save()
+    .then(savedduration => {
+      res.redirect(302, '/adminm'); // Redirect to success page
+    })
+    .catch(err => {
+      console.error(err);
+      res.redirect('/'); // Redirect to error page
+    });
+});
 
 
 // Start the server

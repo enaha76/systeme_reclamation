@@ -421,7 +421,9 @@
                             </div>
                             <div class="card-body">
 
-
+                                <div id="timerDiv" class="text-danger">
+                                    Last duration: <%= lastDuration %> days
+                                </div>
 
                                 <!-- ! hey -->
                                 <div class="card">
@@ -882,7 +884,12 @@
     </script>
 
 
-
+    <script>
+        // Define a global variable to store the value of lastDuration
+        var lastDuration = ' <%= lastDuration%>';
+      </script>
+       <!-- user.js -->
+        <script  src="assets/js/user.js"></script>
 
 
     <!-- demo app -->
